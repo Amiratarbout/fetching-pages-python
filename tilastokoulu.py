@@ -57,9 +57,8 @@ def middle(middle_texts):
                     continue
                 subject_value = subject_option['value']
                 if not subject_value:
-                    subject_id = 0
-                else:
-                    subject_id = subject_value
+                    continue
+                subject_id = subject_value
                 subject_url = middle_url + '&subject_id={}'.format(subject_id)
                 if check_exist(subject_url):  # skip if this url was already done
                     continue
