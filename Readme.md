@@ -1,6 +1,6 @@
 Python Script for fetching px pages from thatsthem site
 -------------------------------------------------------
-## Environment
+### Environment
     - python 3 and pip
     
 Once windows or linux systems have been installed python 3, this script will work.
@@ -12,7 +12,8 @@ You can install them using pip after you will be located on root directory of th
     
 ### Executing
 
-    - python px_scraper.py
+    - python px_scraper.py                            ## For px script
+    - python tilastokoulu.py                          ## For tilastokoulu script
     
 If you are success, list of dicts will be printed on the console.
     
