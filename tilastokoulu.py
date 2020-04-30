@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup as BS
 from requests.exceptions import ConnectionError, ConnectTimeout
+import time
 
 
 def send_request(url):
@@ -18,10 +19,12 @@ def send_request(url):
             'url': url,
             'html': res
         })
-        print('Count: {}, '.format(len(total_urls)), url)
+        print('Count: {},'.format(len(total_urls)), url)
         return res
     except (ConnectionError, ConnectTimeout) as e:
-        raise Exception('Occurred in Request')
+        print('Connection Error Was Occurred. Need to retry...')
+        time.sleep(5)
+        return send_request(url)
 
 
 def check_exist(check_url):
